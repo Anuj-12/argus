@@ -1,4 +1,4 @@
-# Bluerover
+# Argus
 
 A baremetal no-HAL STM32F401RE project focused on building a rover from ground up by building custom drivers.
 - Modular embedded architecture
