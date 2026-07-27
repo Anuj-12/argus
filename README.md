@@ -1,12 +1,12 @@
 # Argus
 
-A baremetal no-HAL STM32F401RE project focused on building a rover from ground up by building custom drivers.
+Argus is a bare-metal STM32 rover firmware project that explores how real embedded systems are structured—from peripheral drivers to command processing and motor control—without relying on STM32 HAL.
 - Modular embedded architecture
 - Interrupt driven UART communication
 - Bluetooth command handling
 - PWM motor control
 
-This project is primarly a learning platform for:
+This project explores modular firmware architecture by incrementally implementing reusable embedded drivers and integrating them into a mobile robot
 - Building embedded architecture 
 - Interrupt driven design
 - Buffering communication data
