@@ -12,10 +12,14 @@ typedef struct{
 }MOTOR;
 
 MOTOR motors[4] = {
-		{15, 'A', 0, 1},
-		{3, 'B', 2, 3},
-		{10, 'B', 10, 12},
-		{11, 'B', 13, 14},
+		// C6, C0, C1
+		{6, 'C', 0, 1},
+		// C7, C2, C3
+		{7, 'C', 2, 3},
+		// C8, C10, C12
+		{8, 'C', 10, 12},
+		// C9, C13. C14
+		{9, 'C', 13, 14},
 };
 
 // -1 for channels everywhere because api is 1 indexed
@@ -23,7 +27,7 @@ void motor_init(int channel, uint16_t freq){
 	channel--;
 
 	/* CONFIGURE THE PWM PIN */
-	gpio_config_alternate(motors[channel].EN_port, motors[channel].EN, 1);
+	gpio_config_alternate(motors[channel].EN_port, motors[channel].EN, 2);
 	pwm_init(channel + 1, freq);	// +1 because pwm_init also subtracts it
 
 	/* CONFIGURE THE DIRECTION PINS */
@@ -34,7 +38,7 @@ void motor_init(int channel, uint16_t freq){
 
 void motor_init_all(uint16_t freq){
 	for(int i = 0; i < 4; i++){
-	        gpio_config_alternate(motors[i].EN_port, motors[i].EN, 1);
+	        gpio_config_alternate(motors[i].EN_port, motors[i].EN, 2);
 	        gpio_config_output('C', motors[i].IN1);
 	        gpio_config_output('C', motors[i].IN2);
 	        pwm_init(i + 1, freq);
