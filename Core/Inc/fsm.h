@@ -24,7 +24,7 @@ typedef struct{
     rover_event_t event;
     rover_state_t next_state;
 
-    void (*action)(void)
+    void (*action)(void);
 }transition_t;
 
 rover_state_t fsm_handle_event(rover_state_t curr_state, rover_event_t curr_event);

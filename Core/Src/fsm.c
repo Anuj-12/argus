@@ -33,7 +33,8 @@ transition_t fsm_table[] = {
     {RIGHT, MOVE_L, LEFT, rover_left},
     
     // End marker to stop the iteration
-    {STATE_INVALID, EVENT_INVALID, STATE_INVALID, NULL}
+	// 0 works fine as NULL for fxn pointers
+    {STATE_INVALID, EVENT_INVALID, STATE_INVALID, 0}
 };
 
 rover_state_t fsm_handle_event(rover_state_t curr_state, rover_event_t curr_event){
