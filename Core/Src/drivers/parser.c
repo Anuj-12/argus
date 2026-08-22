@@ -4,7 +4,7 @@
 #include "parser.h"
 #include "fsm.h"
 
-rover_event_t parse_uart_to_event(volatile char* msg) {
+rover_event_t parse_uart_to_event(const char* msg) {
     if (strcmp("F\r\n", msg) == 0) {
         return MOVE_F;
     } else if (strcmp("B\r\n", msg) == 0) {

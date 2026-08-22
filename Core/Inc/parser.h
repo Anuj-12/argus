@@ -3,6 +3,6 @@
 
 #include "fsm.h"
 
-rover_event_t parse_uart_to_event(volatile char* msg);
+rover_event_t parse_uart_to_event(const char* msg);
 
 #endif /* INC_PARSER_H_ */

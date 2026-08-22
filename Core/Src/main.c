@@ -5,6 +5,7 @@
 #include "bluetooth.h"
 #include "uart_reader.h"
 #include "parser.h"
+#include <string.h>
 
 volatile char msg[50] = {};
 
