@@ -7,7 +7,7 @@ typedef enum{
     BACK,
     LEFT,
     RIGHT,
-    STATE-INVALID
+    STATE_INVALID
 }rover_state_t;
 
 typedef enum{
