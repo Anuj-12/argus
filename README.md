@@ -11,6 +11,13 @@ Argus is a bare-metal STM32 rover firmware project that explores how real embedd
 - SysTick based blocking and non-blocking delay
 - PWM motor control
 
+## Quick Start
+
+1. **Flash firmware** to STM32F401RE
+2. **Connect via Bluetooth** (HC05)
+3. **Send commands:** F (forward), B (backward), L/R (turn), S (stop)
+4. **Run tests:** `cd tests && make all`
+
 ## Planned
 
 - ESP-NOW communication layer to replace bluetooth
@@ -70,3 +77,8 @@ This separation keeps interrupt execution lightweight.
 
 - USB to TTL converter
 - 8 Channel Logic Analyzer
+
+
+
+
+No preview is available as of now because of faulty hardware
