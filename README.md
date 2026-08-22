@@ -21,8 +21,8 @@ Argus is a bare-metal STM32 rover firmware project that explores how real embedd
 ## Planned
 
 - ESP-NOW communication layer to replace bluetooth
-- IR based line following autonimity
-- CV based autonimity
+- Autonomous navigation
+- Camera integration
 
 ## Hardware Used
 
