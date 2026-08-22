@@ -1,39 +1,30 @@
 # Argus
 
 Argus is a bare-metal STM32 rover firmware project that explores how real embedded systems are structured—from peripheral drivers to command processing and motor control—without relying on STM32 HAL.
-- Modular embedded architecture
+
+## Current Features
+
+- FSM driven architecture
 - Interrupt driven UART communication
-- Bluetooth command handling
+- HC05 Bluetooth integration 
+- Parser based bluetooth command handling
+- SysTick based blocking and non-blocking delay
 - PWM motor control
 
-This project explores modular firmware architecture by incrementally implementing reusable embedded drivers and integrating them into a mobile robot
-- Building embedded architecture 
-- Interrupt driven design
-- Buffering communication data
+## Planned
 
+- ESP-NOW communication layer to replace bluetooth
+- IR based line following autonimity
+- CV based autonimity
 
-## 🛠 Hardware Used
+## Hardware Used
 
 - STM32F401RE Nucleo Board
 - L298N Motor Driver
 - HC05 Bluetooth Module
 - DC motors
 
-
-## ⚙️ Current Features
-
-- GPIO abstraction
-- UART drivers
-- Interrupt-driven UART RX
-- Ring buffer based UART reception
-- Parser-based command handling
-- PWM motor control
-- SysTick based blocking and non-blocking delay
-- Modular multi-file structure
-- HC05 Bluetooth integration 
-
-
-## 🧠 Architecture
+## Architecture
 
 ```text
          HC05
@@ -60,9 +51,7 @@ This project explores modular firmware architecture by incrementally implementin
       PWM Timers
 ```
 
-
-
-## 🔄 Runtime Model
+## Runtime Model
 
 UART reception is interrupt-driven.
 
@@ -77,11 +66,7 @@ The main superloop:
 
 This separation keeps interrupt execution lightweight.
 
-
-## 🐞 Debugging Tools
+## Debugging Tools
 
 - USB to TTL converter
 - 8 Channel Logic Analyzer
-
-
-## 🎬 Preview 
